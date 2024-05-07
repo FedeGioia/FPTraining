@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FPTraining</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">FPTraining</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ejercicios.html">Ejercicios</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="calendar-container">
+        <div class="arrow arrow-left">&lt;</div>
+        <div class="arrow arrow-right">&gt;</div>
+        <div class="calendar">
+
+          <div class="week" id="weekDays">
+            <!-- Aquí se insertarán los días de la semana actual con JavaScript -->
+          </div>
+          <!-- Repite esto para las demás semanas -->
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="scriptCalendario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+
+    <script>
+        let currentWeekStart = new Date();
+    
+        function updateCalendar() {
+          const weekDaysContainer = document.getElementById('weekDays');
+          weekDaysContainer.innerHTML = ''; // Limpiamos los días de la semana antes de volver a generarlos
+          const days = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
+          for (let i = 0; i < 7; i++) {
+            const day = new Date(currentWeekStart);
+            day.setDate(currentWeekStart.getDate() + i);
+            const dayName = days[day.getDay()];
+            const dayNumber = day.getDate();
+            const dayElement = document.createElement('div');
+            dayElement.classList.add('day');
+            if (i === new Date().getDay() && currentWeekStart.toDateString() === new Date().toDateString()) {
+              dayElement.classList.add('selected'); // Aplicamos la clase 'selected' al día actual
+            }
+            dayElement.innerHTML = `
+              <div class="day-name">${dayName}</div>
+              <div class="day-number">${dayNumber}</div>
+            `;
+            weekDaysContainer.appendChild(dayElement);
+          }
+        }
+    
+        updateCalendar();
+    
+        document.querySelector('.arrow-left').addEventListener('click', () => {
+          currentWeekStart.setDate(currentWeekStart.getDate() - 7);
+          updateCalendar();
+        });
+    
+        document.querySelector('.arrow-right').addEventListener('click', () => {
+          currentWeekStart.setDate(currentWeekStart.getDate() + 7);
+          updateCalendar();
+        });
+    
+        document.querySelector('.calendar').addEventListener('click', (event) => {
+          if (event.target.classList.contains('day')) {
+            document.querySelectorAll('.day').forEach((day) => {
+              day.classList.remove('selected'); // Eliminamos la clase 'selected' de todos los días
+            });
+            event.target.classList.add('selected'); // Agregamos la clase 'selected' al día seleccionado
+          } else if (event.target.parentElement.classList.contains('day')) {
+            document.querySelectorAll('.day').forEach((day) => {
+              day.classList.remove('selected'); // Eliminamos la clase 'selected' de todos los días
+            });
+            event.target.parentElement.classList.add('selected'); // Agregamos la clase 'selected' al día seleccionado
+          }
+        });
+      </script>
+  </body>
+
+</html>	
