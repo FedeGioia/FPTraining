@@ -1,86 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FPTraining</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/index.css" rel="stylesheet" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <header class="p-0 mb-0 border-bottom">
-          <div class="d-flex flex-wrap align-items-center justify-content-beetwen justify-content-lg-start">
-        
-              <div class="d-flex  align-items-center  justify-content-lg-start">
-                  <ul class="nav col-12 col-lg-auto me-lg-auto mb-2  mb-md-0">
-                      <img src="images/fptraining.jpeg" alt="mdo" width="60" height="60" class="">
-                      <li><a href="" class="nav-link px-2 link-body-emphasis">FPTraining</a></li>
-                      <li><a href="index.html" class="nav-link px-2 link-body-emphasis">Calendario</a></li>
-                      <li><a href="ejercicios.html" class="nav-link px-2 link-body-emphasis">Ejercicios</a></li>
-                  </ul>
-
-                  <div class="dropdown text-end">
-                      <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                          <img src="images/Hercules.jpeg" alt="mdo" width="40" height="40" class="rounded-circle">
-                      </a>
-                      <ul class="dropdown-menu text-small" >
-                          <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="signIn.html">Cerrar Sesion</a></li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </header>
-  </nav>
-    <div class="calendar-container">
-
-        <div class="calendar">
-
-          <div class="week-label" id="weekLabel"></div>
-          <div class="arrow arrow-left">&lt;</div>
-          <div class="arrow arrow-right">&gt;</div>
-          <div class="week" id="weekDays">
-          
-            <!-- Aquí se insertarán los días de la semana actual con JavaScript -->
-          </div>
-          <!-- Repite esto para las demás semanas -->
+      <div class="container-fluid">
+        <!-- Añadimos un contenedor fluido para que la barra se expanda -->
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/fptraining.jpeg"
+            alt="FPTraining"
+            width="60"
+            height="60"
+            class="rounded-circle"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-start"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Calendario</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ejercicios.html">Ejercicios</a>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown text-end">
+          <a
+            href="#"
+            class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="images/Hercules.jpeg"
+              alt="mdo"
+              width="40"
+              height="40"
+              class="rounded-circle"
+            />
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" href="signIn.html">Cerrar Sesion</a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
+    <div class="calendar-container">
+      <div class="calendar">
+        <div class="week-label" id="weekLabel"></div>
+        <div class="arrow arrow-left">&lt;</div>
+        <div class="arrow arrow-right">&gt;</div>
+        <div class="week" id="weekDays">
+          <!-- Aquí se insertarán los días de la semana actual con JavaScript -->
+        </div>
+        <!-- Repite esto para las demás semanas -->
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts/scriptCalendario.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     <script>
       let currentWeekStart = new Date();
-  
+
       function updateCalendar() {
-        const weekDaysContainer = document.getElementById('weekDays');
-        const weekLabel = document.getElementById('weekLabel');
-        weekDaysContainer.innerHTML = ''; // Limpiamos los días de la semana antes de volver a generarlos
-        const days = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
+        const weekDaysContainer = document.getElementById("weekDays");
+        const weekLabel = document.getElementById("weekLabel");
+        weekDaysContainer.innerHTML = ""; // Limpiamos los días de la semana antes de volver a generarlos
+        const days = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
         const months = [
-          'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
-          'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
         ];
         let weekStart = new Date(currentWeekStart);
-        weekStart.setDate(currentWeekStart.getDate() - currentWeekStart.getDay());
+        weekStart.setDate(
+          currentWeekStart.getDate() - currentWeekStart.getDay()
+        );
         let weekEnd = new Date(weekStart);
         weekEnd.setDate(weekEnd.getDate() + 6);
-        const weekStartFormatted = `${weekStart.getDate()} de ${months[weekStart.getMonth()].toUpperCase()}`;
-        const weekEndFormatted = `${weekEnd.getDate()} de ${months[weekEnd.getMonth()].toUpperCase()}`;
+        const weekStartFormatted = `${weekStart.getDate()} de ${months[
+          weekStart.getMonth()
+        ].toUpperCase()}`;
+        const weekEndFormatted = `${weekEnd.getDate()} de ${months[
+          weekEnd.getMonth()
+        ].toUpperCase()}`;
         weekLabel.textContent = `${weekStartFormatted} a ${weekEndFormatted}`;
         for (let i = 0; i < 7; i++) {
           const day = new Date(weekStart);
           day.setDate(weekStart.getDate() + i);
           const dayName = days[day.getDay()];
           const dayNumber = day.getDate();
-          const dayElement = document.createElement('div');
-          dayElement.classList.add('day');
-          if (i === new Date().getDay() && currentWeekStart.toDateString() === new Date().toDateString()) {
-            dayElement.classList.add('selected'); // Aplicamos la clase 'selected' al día actual
+          const dayElement = document.createElement("div");
+          dayElement.classList.add("day");
+          if (
+            i === new Date().getDay() &&
+            currentWeekStart.toDateString() === new Date().toDateString()
+          ) {
+            dayElement.classList.add("selected"); // Aplicamos la clase 'selected' al día actual
           }
           dayElement.innerHTML = `
             <div class="day-name">${dayName}</div>
@@ -89,33 +144,32 @@
           weekDaysContainer.appendChild(dayElement);
         }
       }
-  
+
       updateCalendar();
-  
-      document.querySelector('.arrow-left').addEventListener('click', () => {
+
+      document.querySelector(".arrow-left").addEventListener("click", () => {
         currentWeekStart.setDate(currentWeekStart.getDate() - 7);
         updateCalendar();
       });
-  
-      document.querySelector('.arrow-right').addEventListener('click', () => {
+
+      document.querySelector(".arrow-right").addEventListener("click", () => {
         currentWeekStart.setDate(currentWeekStart.getDate() + 7);
         updateCalendar();
       });
-  
-      document.querySelector('.calendar').addEventListener('click', (event) => {
-        if (event.target.classList.contains('day')) {
-          document.querySelectorAll('.day').forEach((day) => {
-            day.classList.remove('selected'); // Eliminamos la clase 'selected' de todos los días
+
+      document.querySelector(".calendar").addEventListener("click", (event) => {
+        if (event.target.classList.contains("day")) {
+          document.querySelectorAll(".day").forEach((day) => {
+            day.classList.remove("selected"); // Eliminamos la clase 'selected' de todos los días
           });
-          event.target.classList.add('selected'); // Agregamos la clase 'selected' al día seleccionado
-        } else if (event.target.parentElement.classList.contains('day')) {
-          document.querySelectorAll('.day').forEach((day) => {
-            day.classList.remove('selected'); // Eliminamos la clase 'selected' de todos los días
+          event.target.classList.add("selected"); // Agregamos la clase 'selected' al día seleccionado
+        } else if (event.target.parentElement.classList.contains("day")) {
+          document.querySelectorAll(".day").forEach((day) => {
+            day.classList.remove("selected"); // Eliminamos la clase 'selected' de todos los días
           });
-          event.target.parentElement.classList.add('selected'); // Agregamos la clase 'selected' al día seleccionado
+          event.target.parentElement.classList.add("selected"); // Agregamos la clase 'selected' al día seleccionado
         }
       });
     </script>
   </body>
-
-</html>	
+</html>
