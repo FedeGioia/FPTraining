@@ -1,0 +1,59 @@
+.calendar-container {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .arrow {
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+  .calendar {
+    margin-top: 40px; 
+    border-width: 2px;
+    border-color: black;
+  }
+  
+  .week {
+    display: flex;
+    border-width: 2px;
+    border-color: black;
+  }
+  .day .day-name {
+    font-weight: bold;
+  } 
+  .day {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 20px;
+    border-radius: 10px;
+    margin: 2px;
+    background-color: #f0f0f0;
+  }
+  .day:hover {
+    background-color: #0D6EFD; 
+    }
+.day.selected {
+        background-color: #0D6EFD; /* Cambia el color de fondo del día seleccionado */
+        color: #ffffff; /* Cambia el color del texto del día seleccionado a blanco */
+      }
+  .selected {
+    background-color: #0D6EFD;
+    color: white;
+  }
+  .week-label {
+    text-align: center;
+    font-weight: bold;
+  }
