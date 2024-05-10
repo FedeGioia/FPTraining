@@ -22,32 +22,35 @@
 </head>
 
   <body>
-    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <header class="p-0 mb-0 border-bottom">
-            <div class="d-flex flex-wrap align-items-center justify-content-beetwen justify-content-lg-start">
-          
-                <div class="d-flex  align-items-center  justify-content-lg-start">
-                    <ul class="nav col-12 mb-2  col-lg-auto me-lg-auto mb-md-0">
-                        <img src="images/fptraining.jpeg" alt="mdo" width="60" height="60" class="rounded-circle">
-                        <li><a href="" class="nav-link px-2 link-body-emphasis">FPTraining</a></li>
-                        <li><a href="index.html" class="nav-link px-2 link-body-emphasis">Calendario</a></li>
-                        <li><a href="ejercicios.html" class="nav-link px-2 link-body-emphasis">Ejercicios</a></li>
-                    </ul>
-
-                    <div class="dropdown text-end">
-                        <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="images/Hercules.jpeg" alt="mdo" width="40" height="40" class="rounded-circle">
-                        </a>
-                        <ul class="dropdown-menu text-small">
-                            <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="signIn.html">Cerrar Sesion</a></li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="container-fluid"> <!-- Añadimos un contenedor fluido para que la barra se expanda -->
+            <a class="navbar-brand" href="#">
+                <img src="images/fptraining.jpeg" alt="FPTraining" width="60" height="60" class="rounded-circle">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Calendario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ejercicios.html">Ejercicios</a>
+                    </li>
+                </ul>
             </div>
-        </header>
+            <div class="dropdown text-end">
+                <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="images/Hercules.jpeg" alt="mdo" width="40" height="40" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu text-small" >
+                    <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="signIn.html">Cerrar Sesion</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
     <div class="container justify-content-center">
     
