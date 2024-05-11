@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <style>
       .card:hover {
-        background-color: #0D6EFD;
+        background-color: #0d6efd;
         font-weight: bold;
       }
     </style>
@@ -12,123 +11,178 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FPTraining</title>
-    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/perfil.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid"> <!-- Añadimos un contenedor fluido para que la barra se expanda -->
-            <a class="navbar-brand" href="#">
-                <img src="images/fptraining.jpeg" alt="FPTraining" width="60" height="60" class="rounded-circle">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Calendario</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="ejercicios.html">Ejercicios</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="dropdown text-end">
-                <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="images/Hercules.jpeg" alt="mdo" width="40" height="40" class="rounded-circle">
-                </a>
-                <ul class="dropdown-menu text-small" >
-                    <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="signIn.html">Cerrar Sesion</a></li>
-                </ul>
-            </div>
+      <div class="container-fluid">
+        <!-- Añadimos un contenedor fluido para que la barra se expanda -->
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/fptraining.jpeg"
+            alt="FPTraining"
+            width="60"
+            height="60"
+            class="rounded-circle"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-start"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Calendario</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ejercicios.html">Ejercicios</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-    <div class="container justify-content-center">
-    
-    <div class="row justify-content-center" id="myDIV">
-        <div class="col-md-7 col-lg-8">
-            <form class="needs-validation" novalidate="">
-                <div class="wrapper row">
-                    <!-- Avatar y Usuario -->
-                    <div class="col-12 justify-content-lg-start align-items-center d-flex">
-                        <div class="col-4">
-                            <img src="images/Hercules.jpeg" alt="mdo" width="160" height="160" class="rounded-circle">
-                        </div>
-                        <div class="col-8 align-self-center" style="margin-top: 10px;">
-                            <div class="input-box">
-                                <label for="username" class="form-label">Usuario</label>
-                                <div class="input-group has-validation">
-                                    <span class="input-group-text">@</span>
-                                    <input type="text" class="form-control" id="username" placeholder="Username" value="ElProfe" required="">
-                                    <div class="invalid-feedback"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                <div class="col-12">
-                <div class="input-box">
-                <label for="firstName" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="Fernando" required="">
-                <div class="invalid-feedback">
-                </div>
-                </div>
-                </div>
-
-                <div class="col-12">
-                <div class="input-box ">
-                <label for="lastName" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="Pose" required="">
-                <div class="invalid-feedback">
-                </div>
-                </div>
-                </div>
-        
-                <div class="col-12">
-                <div class="input-box">   
-                <label for="email" class="form-label">Email <span class="text-body-secondary"></span></label>
-                <input type="email" class="form-control" id="email" placeholder="you@example.com" value="ferpose@gmail.com">
-                <div class="invalid-feedback">
-                </div>
-                </div>
-                </div>
-
-                    <div class="col-md-6">
-                    <div class="input-box">
-                        <label for="country" class="form-label">Pais</label>
-                        <input type="text" class="form-control" id="country" placeholder="Ingresar pais" value="Argentina">
-                    <div class="invalid-feedback">
-                    </div>
-                    </div>
-                    </div> 
-                    <div class="col-md-6">
-                        <div class="input-box">
-                            <label for="country" class="form-label">Telefono</label>
-                            <input type="text" class="form-control" id="country" placeholder="" value="+54 9 116899317">
-                        <div class="invalid-feedback">  
-                        </div>
-
-                        </div>
-                        </div> 
-   
-            <hr class="my-4">
-        
-            <button class="w-100 btn btn-primary btn-lg" type="submit">Guardar</button>
-            </form>
+    <form class="needs-validation" novalidate="">
+      <div class="wrapper">
+        <!-- Avatar y Usuario -->
+        <div class="foto-interfaz">
+            <div class="foto">
+                <img
+                  src="images/Hercules.jpeg"
+                  alt="mdo"
+                  width="80"
+                  height="80"
+                  class="rounded-circle"
+                />
+              </div>
+              <div class="editar-foto">
+                <p>Cambiar Foto</p>
+              </div>
         </div>
-    </div>
-     </div>
+
+        <div class="usuario">
+          <label for="username" class="form-label">Usuario</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              placeholder="Username"
+              value="ElProfe"
+              required=""
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="input-box">
+            <label for="firstName" class="form-label">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              placeholder=""
+              value="Fernando"
+              required=""
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="input-box">
+            <label for="lastName" class="form-label">Apellido</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              placeholder=""
+              value="Pose"
+              required=""
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="input-box">
+            <label for="email" class="form-label"
+              >Email <span class="text-body-secondary"></span
+            ></label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="you@example.com"
+              value="ferpose@gmail.com"
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="input-box">
+            <label for="country" class="form-label">Pais</label>
+            <input
+              type="text"
+              class="form-control"
+              id="country"
+              placeholder="Ingresar pais"
+              value="Argentina"
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input-box">
+            <label for="country" class="form-label">Telefono</label>
+            <input
+              type="text"
+              class="form-control"
+              id="country"
+              placeholder=""
+              value="+54 9 116899317"
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4" />
+      <div class="boton">
+        <button class="w-100 btn btn-primary btn-lg" type="submit">
+          Guardar
+        </button>
+      </div>
+    </form>
   </body>
-</html>	
+</html>
