@@ -1,0 +1,42 @@
+@media screen and (max-width: 600px) {
+    .video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2%;
+    }
+
+    .video iframe {
+        width: 95vw;
+        height: 70%;
+    }
+    
+    .nav-item a {
+        text-align: center;
+    }
+    
+    body {
+        background-color: #000000;
+    }
+    
+    .ejercicio {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .descripcion {
+        color: #ffffff;
+        margin-left: 3%;
+        font-size: 16px;
+    }
+
+    .video {
+        margin: auto;
+    }
+    
+    * {
+        font-family: "Poppins", sans-serif;
+      }
+      
+}
+
