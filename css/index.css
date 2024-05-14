@@ -5,18 +5,21 @@
 
 
   .arrow {
-    position: relative;
-    top: 10px;
     cursor: pointer;
+    font-size: 30px;
   }
 
   .arrow-left {
-    left: 10px;
+    position: relative;
+    top: 29px;
   }
 
   .arrow-right {
-    right: 10px;
+    position: relative;
+    left: 490px;
+    bottom: 15px;
   }
+
   .calendar {
     margin-top: 40px; 
     border-width: 2px;
