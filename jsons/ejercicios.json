@@ -1,0 +1,34 @@
+{
+  "Ejercicios": {
+    "0": {
+      "nombre": "Press Banca",
+      "descCard": "Pecho, Hombro, Tren Superior",
+      "img": "images/PressBanca.jpeg"
+    },
+    "1": {
+      "nombre": "Press Militar",
+      "descCard": "Pecho, Hombro, Tren Superior",
+      "img": "images/Piedrita.jpeg"
+    },
+    "2": {
+      "nombre": "Vuelos Laterales",
+      "descCard": "Pecho, Hombro, Tren Superior",
+      "img": "images/Piedrita.jpeg"
+    },
+    "3": {
+      "nombre": "Sentadilla",
+      "descCard": "Cuadriceps, Tren Inferior",
+      "img": "images/sentadilla.jpg" 
+    },
+    "4": {
+      "nombre": "Stretching",
+      "descCard": "Pecho, Hombro, Tren Superior",
+      "img": "images/stretching.jpeg"
+    },
+    "5": {
+        "nombre": "Agregar Ejercicio",
+        "descCard": "",
+        "img": "images/iconoMas.jpeg"
+      }
+  }
+}
